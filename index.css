@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+margin: 0;
+box-sizing: 0;
+padding: 0;
+font-family: "Inter", sans-serif;
+/* font-optical-sizing: auto;
+font-style: normal; */
+}
+
+:root{
+    /* Colors */
+--colorWhite: hsl(0, 0%, 100%);
+--colorBlue200: hsl(224, 100%, 95%);
+--colorBlue400: hsl(220, 100%, 64%);
+--colorBlue600: hsl(228, 100%, 60%);
+--colorBlue700: hsl(228, 99%, 58%);
+--colorBlack: hsl(0, 0%, 0%); /* used at 25% opacity for the menu overlay */
+
+/* Txts */
+--fontSizeParagraph: 17px;
+--FontSize: 14px; /* (stat descriptions, nav, footer) *
+
+/* Font Weight */
+--fontweight-400: 400;
+--fontweight-500: 500;
+}
+
+body {
+    width: 100vw;
+    height: 100dvh;
+    background-color: var(--colorBlue700);
+}
+
+.body-container {
+    max-width: 1440px;
+}
+
+/* Header Section */
+.header-container {
+    display: flex;
+    padding: 1.5rem 3.5rem;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--colorBlue600);
+}
+
+.left-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.35rem;
+}
+
+.dot-logo {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: var(--colorWhite);
+}
+
+.text-logo {
+    color: var(--colorWhite);
+    font-size: var(--FontSize);
+}
+
+.close-icon {
+    width: 1.35rem;
+    height: auto;
+}
+
+.close-icon:hover {
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-container {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-container {
+    width: 65%;
+    height: 100%;
+    background-color: blue;
+    padding: 0 3.5rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.35rem;
+    color: var(--colorWhite);
+}
+
+.hero-caption {
+    font-size: 2.35rem;
+    line-height: 2.65rem;
+    font-weight: var(--fontweight-500);
+}
+
+.hero-subcap {
+    font-size: 0.65rem;
+    line-height: 1.15rem;
+    font-weight: var(--fontweight-400);
+}
+
+/* Navigation section */
+.navBar-container {
+    height: fit-content;
+    padding: 3rem 3.5rem;
+    color: var(--colorWhite);
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.navBar-container  li {
+    cursor: pointer;
+    font-size: 1.25rem;
+    text-align: end;
+    font-weight: var(--fontweight-500);
+    list-style-type: none;
+    border-bottom: 2px solid var(--colorBlue700);
+
+    & span:hover {
+        border-bottom: 2px solid var(--colorWhite);
+    }
+}
