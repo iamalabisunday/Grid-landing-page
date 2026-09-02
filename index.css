@@ -82,10 +82,13 @@ body {
 }
 
 .main-container {
-    width: 65%;
+    width: 70%;
     height: 100%;
     background-color: blue;
-    padding: 0 3.5rem;
+    padding-left: 3.5rem;
+    display: grid;
+    grid-template-areas: "header header sidebar"
+                         "header header sidebar2";
 }
 
 .hero-content {
@@ -93,6 +96,7 @@ body {
     flex-direction: column;
     row-gap: 1.35rem;
     color: var(--colorWhite);
+    grid-area: header;
 }
 
 .hero-caption {
@@ -105,6 +109,49 @@ body {
     font-size: 0.65rem;
     line-height: 1.15rem;
     font-weight: var(--fontweight-400);
+}
+
+/* Boxes Section */
+.hero-box, .hero-box2 {
+    padding: 1rem;
+    border: 1px solid var(--colorBlue600);
+    color: var(--colorWhite);
+}
+
+.hero-box {
+    grid-area: sidebar;
+}
+
+.hero-box2 {
+    grid-area: sidebar2;
+}
+
+.box-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .star-img {
+        width: 1rem;
+        height: auto;
+    }
+    & .star-numb {
+        font-size: var(--FontSize);
+    }
+}
+
+.box-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.12rem;
+    & .box-txthd {
+        font-size: 0.90rem;
+    }
+    & .box-txtbd {
+        font-size: 0.68rem;
+        color: var(--colorBlue200);
+    }
 }
 
 /* Navigation section */
