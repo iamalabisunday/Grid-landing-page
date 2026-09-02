@@ -75,17 +75,20 @@ body {
 
 /* Hero Section */
 .hero-container {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-areas: "header header sidebar"
+                         "header header sidebar"
+                         "footer footer sidebar";
 }
 
 .main-container {
-    width: 70%;
+    width: 100%;
     height: 100%;
     background-color: blue;
     padding-left: 3.5rem;
+    grid-area: header;
     display: grid;
     grid-template-areas: "header header sidebar"
                          "header header sidebar2";
@@ -95,6 +98,7 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 1.35rem;
+    justify-content: center;
     color: var(--colorWhite);
     grid-area: header;
 }
@@ -116,6 +120,9 @@ body {
     padding: 1rem;
     border: 1px solid var(--colorBlue600);
     color: var(--colorWhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hero-box {
@@ -154,6 +161,19 @@ body {
     }
 }
 
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: blue;
+    border-top: 1px solid var(--colorBlue600);
+    font-size: 0.75rem;
+    color: var(--colorBlue400);
+    padding-left: 3.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    grid-area: footer;
+}
+
 /* Navigation section */
 .navBar-container {
     height: fit-content;
@@ -162,6 +182,7 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
+    grid-area: sidebar;
 }
 
 .navBar-container  li {
