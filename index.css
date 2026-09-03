@@ -1,29 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
-margin: 0;
-box-sizing: border-box;
-font-family: "Inter", sans-serif;
-/* font-optical-sizing: auto;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    /* font-optical-sizing: auto;
 font-style: normal; */
 }
 
-:root{
+:root {
     /* Colors */
---colorWhite: hsl(0, 0%, 100%);
---colorBlue200: hsl(224, 100%, 95%);
---colorBlue400: hsl(220, 100%, 64%);
---colorBlue600: hsl(228, 100%, 60%);
---colorBlue700: hsl(228, 99%, 58%);
---colorBlack: hsl(0, 0%, 0%); /* used at 25% opacity for the menu overlay */
+    --colorWhite: hsl(0, 0%, 100%);
+    --colorBlue200: hsl(224, 100%, 95%);
+    --colorBlue400: hsl(220, 100%, 64%);
+    --colorBlue600: hsl(228, 100%, 60%);
+    --colorBlue700: hsl(228, 99%, 58%);
+    --colorPrimary: blue;
+    --colorBlack: hsl(0, 0%, 0%);
+    /* used at 25% opacity for the menu overlay */
 
-/* Txts */
---fontSizeParagraph: 17px;
---FontSize: 14px; /* (stat descriptions, nav, footer) *
+    /* Txts */
+    --fontSizeParagraph: 17px;
+    --FontSize: 14px;
+    /* (stat descriptions, nav, footer) *
 
 /* Font Weight */
---fontweight-400: 400;
---fontweight-500: 500;
+    --fontweight-400: 400;
+    --fontweight-500: 500;
 }
 
 body {
@@ -79,18 +82,18 @@ body {
     width: 100%;
     display: grid;
     grid-template-areas: "header header sidebar"
-                         "header header sidebar"
-                         "footer footer sidebar";
+        "header header sidebar"
+        "footer footer sidebar";
 }
 
 .main-container {
     width: 100%;
-    background-color: blue;
+    background-color: var(--colorPrimary);
     padding-left: 3.5rem;
     grid-area: header;
     display: grid;
     grid-template-areas: "header header sidebar"
-                         "header header sidebar2";
+        "header header sidebar2";
 }
 
 .hero-content {
@@ -116,7 +119,8 @@ body {
 }
 
 /* Boxes Section */
-.hero-box, .hero-box2 {
+.hero-box,
+.hero-box2 {
     padding: 1rem;
     border: 1px solid var(--colorBlue600);
     border-bottom: none;
@@ -140,10 +144,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     & .star-img {
         width: 1rem;
         height: auto;
     }
+
     & .star-numb {
         font-size: var(--FontSize);
     }
@@ -153,9 +159,11 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 0.12rem;
+
     & .box-txthd {
         font-size: 0.90rem;
     }
+
     & .box-txtbd {
         font-size: 0.68rem;
         color: var(--colorBlue200);
@@ -166,7 +174,7 @@ body {
 .footer {
     width: 100%;
     height: 60px;
-    background-color: blue;
+    background-color: var(--colorPrimary);
     border-top: 1px solid var(--colorBlue600);
     font-size: 0.75rem;
     color: var(--colorBlue400);
@@ -189,7 +197,7 @@ body {
     grid-area: sidebar;
 }
 
-.navBar-container  li {
+.navBar-container li {
     cursor: pointer;
     font-size: 1.25rem;
     text-align: end;
@@ -205,13 +213,15 @@ body {
 @media screen and (max-width: 480px) {
     body {
         width: 100%;
-        height: fit-content;
+        min-height: 100dvh;
+        overflow-x: hidden;
     }
 
     .body-container {
-        height: fit-content;
+        width: 100%;
+        height: 100%;
     }
-    
+
     /* Header Section */
     .header-container {
         padding: 0rem 1rem;
@@ -225,6 +235,7 @@ body {
         display: flex;
         flex-direction: column;
         row-gap: 0.5rem;
+
         & li {
             text-align: center;
             font-size: 1.12rem;
@@ -232,7 +243,8 @@ body {
     }
 
     /* Hero and Main Section */
-    .hero-container, .main-container {
+    .hero-container,
+    .main-container {
         display: flex;
         flex-direction: column;
     }
@@ -241,15 +253,18 @@ body {
         padding-left: 1rem;
         padding-right: 1rem;
         padding-top: 1rem;
+
         & .hero-content {
             width: 100%;
             display: flex;
             align-items: center;
             height: fit-content;
             margin-bottom: 1rem;
+
             & .hero-caption {
                 text-align: center;
             }
+
             & .hero-subcap {
                 width: 100%;
                 text-align: center;
@@ -259,8 +274,9 @@ body {
         }
     }
 
-    .hero-box, .hero-box2 {
-        min-height: 8rem;
+    .hero-box,
+    .hero-box2 {
+        height: 300px;
     }
 
     .footer {
