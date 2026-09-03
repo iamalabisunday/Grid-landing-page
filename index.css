@@ -26,10 +26,9 @@ font-style: normal; */
 --fontweight-500: 500;
 }
 
-html, body {
+body {
     width: 100vw;
     height: 100vh;
-    /* overflow: hidden; */
     background-color: var(--colorBlue700);
 }
 
@@ -204,5 +203,68 @@ html, body {
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .body-container {
+        height: fit-content;
+    }
     
+    /* Header Section */
+    .header-container {
+        padding: 0rem 1rem;
+        height: 60px;
+    }
+
+    /* Navgative Section */
+    .navBar-container {
+        height: fit-content;
+        padding: 1.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        & li {
+            text-align: center;
+            font-size: 1.12rem;
+        }
+    }
+
+    /* Hero and Main Section */
+    .hero-container, .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1rem;
+        & .hero-content {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: fit-content;
+            margin-bottom: 1rem;
+            & .hero-caption {
+                text-align: center;
+            }
+            & .hero-subcap {
+                width: 100%;
+                text-align: center;
+                font-size: 0.85rem;
+                line-height: 1.65rem;
+            }
+        }
+    }
+
+    .hero-box, .hero-box2 {
+        min-height: 8rem;
+    }
+
+    .footer {
+        height: fit-content;
+        padding: 1.25rem 1rem;
+    }
 }
