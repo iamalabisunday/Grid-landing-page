@@ -78,7 +78,6 @@ html, body {
 /* Hero Section */
 .hero-container {
     width: 100%;
-    /* height: calc(100vh - 80px); */
     display: grid;
     grid-template-areas: "header header sidebar"
                          "header header sidebar"
@@ -202,4 +201,8 @@ html, body {
     & span:hover {
         border-bottom: 2px solid var(--colorWhite);
     }
+}
+
+@media screen () {
+    
 }
