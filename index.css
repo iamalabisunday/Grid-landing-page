@@ -78,7 +78,7 @@ html, body {
 /* Hero Section */
 .hero-container {
     width: 100%;
-    min-height: calc(100vh - 80px);
+    /* height: calc(100vh - 80px); */
     display: grid;
     grid-template-areas: "header header sidebar"
                          "header header sidebar"
@@ -96,7 +96,7 @@ html, body {
 }
 
 .hero-content {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 140px);
     display: flex;
     flex-direction: column;
     row-gap: 1.35rem;
@@ -121,6 +121,7 @@ html, body {
 .hero-box, .hero-box2 {
     padding: 1rem;
     border: 1px solid var(--colorBlue600);
+    border-bottom: none;
     color: var(--colorWhite);
     display: flex;
     flex-direction: column;
@@ -166,14 +167,16 @@ html, body {
 /* Footer */
 .footer {
     width: 100%;
-    height: fit-content;
+    height: 60px;
     background-color: blue;
     border-top: 1px solid var(--colorBlue600);
     font-size: 0.75rem;
     color: var(--colorBlue400);
     padding-left: 3.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    /* padding-top: 1.5rem;
+    padding-bottom: 1.5rem; */
+    display: flex;
+    align-items: center;
     grid-area: footer;
 }
 
